@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Controller\PageRepository;
+
 
 class PageController {
 
@@ -21,11 +21,12 @@ class PageController {
         if($route === "index") {
             return true;
         } 
-    }
+            return false;
+        }
 
     public function getPage(string $route) {
         if($this->checkPage($route)) {
-            //var_dump($this->pageRepository->category);
+            var_dump($this->pageRepository->category);
         }
     }
 

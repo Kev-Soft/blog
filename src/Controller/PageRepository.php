@@ -8,7 +8,7 @@ class PageRepository {
     public string $title = "Titel";
     public string $content = "Hallo, erster Eintrag!";
 
-    public function __construct () {
+    public function __construct ($database) {
         return $this;
     }
 
