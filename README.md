@@ -1,13 +1,13 @@
 # SmallBlog
 
 SmallBlog is a minimal blog software written in PHP & MySQL. </br>
-Goal is to improve my own skills @ OOP
+Goal is to improve my own skills @ OOP</br>
 So, every critics even if its good or bad are desired.
 
 ## Installation
 
-Upload the whole package to your webspace.
-Rename db.inc.php to db.php.
+Upload the whole package to your webspace.</br>
+Rename db.inc.php to db.php.</br>
 Edit db.php to your valid database settings
 ```bash
 $host = "localhost";
