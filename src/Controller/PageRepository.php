@@ -2,6 +2,10 @@
 
 namespace App\Controller;
 
+
+//PageRepo
+//later Database readout for all Data
+//
 class PageRepository {
 
     public string $category = "Kategorie 1";

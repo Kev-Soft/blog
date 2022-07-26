@@ -7,7 +7,7 @@ require_once(__DIR__."/../inc/autoload.php");
 
 
 
-//Repository muss anhand der Route noch gefilter werden
+
 $container = new \App\Controller\Container();
 
 $container->add('Database', function() use($container) {
@@ -38,7 +38,7 @@ else {
     
 
     $controller = $container->get('PageController');
-    $controller->getPage('index');   
+    $controller->getPage('index', $container->get('PageRepository'));   
 }
 
 

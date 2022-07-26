@@ -7,26 +7,50 @@ namespace App\Controller;
 class PageController {
 
     
-
+    
     
     public function __construct(public PageRepository $pageRepository) {
-         
+        
     } 
 
-    public function render() {
-        //ob_start()
+
+    //Render Function
+    //Receive Route & Data from PageRepo
+
+    public function render($route, PageRepository $pageRepository) {
+
+        ob_start();
+            require __DIR__ .("/../../view/".$route.".view.php"); 
+            $content = ob_get_contents();
+        ob_flush();
+
+        return $content;
+        
     }
 
+
+    //checkPage Function
+    //more implementation are following
+    //database readout for valid page
+
     public function checkPage($route):bool {
+
         if($route === "index") {
             return true;
         } 
             return false;
         }
 
-    public function getPage(string $route) {
+    
+    //getPage function 
+    //first -> checkPage to validate right route
+    //second ->render template
+    
+    public function getPage(string $route, $pageRepository) {
+
         if($this->checkPage($route)) {
-            var_dump($this->pageRepository->category);
+            $this->render($route, $pageRepository);
+            
         }
     }
 
