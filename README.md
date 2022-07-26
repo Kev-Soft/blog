@@ -1,6 +1,6 @@
 # SmallBlog
 
-SmallBlog is a minimal blog software written in PHP & MySQL.
+SmallBlog is a minimal blog software written in PHP & MySQL. </br>
 Goal is to improve my own skills @ OOP
 So, every critics even if its good or bad are desired.
 
