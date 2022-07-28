@@ -9,7 +9,7 @@ class PageController {
     
     
     
-    public function __construct(public PageRepository $pageRepository) {
+    public function __construct(public \APP\Model\PageRepository $pageRepository) {
         
     } 
 
@@ -17,10 +17,10 @@ class PageController {
     //Render Function
     //Receive Route & Data from PageRepo
 
-    public function render($route, PageRepository $pageRepository) {
+    public function render($route, \APP\Model\PageRepository $pageRepository) {
 
         ob_start();
-            require __DIR__ .("/../../view/".$route.".view.php"); 
+            require __DIR__ .("/../View/".$route.".view.php"); 
             $content = ob_get_contents();
         ob_flush();
 

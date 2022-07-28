@@ -15,7 +15,7 @@ $container->add('Database', function() use($container) {
 });
 
 $container->add('PageRepository', function() use($container) {
-    return new \App\Controller\PageRepository($container->get('Database'));
+    return new \App\Model\PageRepository($container->get('Database'));
 });
 
 $container->add('PageController', function() use($container) {
