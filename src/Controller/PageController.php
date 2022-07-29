@@ -19,6 +19,7 @@ class PageController {
 
     public function render($route, \APP\Model\PageRepository $pageRepository) {
 
+       
         ob_start();
             require __DIR__ .("/../View/".$route.".view.php"); 
             $content = ob_get_contents();

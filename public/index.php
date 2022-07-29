@@ -11,7 +11,8 @@ require_once(__DIR__."/../inc/autoload.php");
 $container = new \App\Controller\Container();
 
 $container->add('Database', function() use($container) {
-    return require __DIR__ . ("/../inc/db.php");
+    require __DIR__ . ("/../inc/db.php");
+    return $db;
 });
 
 $container->add('PageRepository', function() use($container) {
@@ -24,7 +25,18 @@ $container->add('PageController', function() use($container) {
     );
 });
 
+$container->add('ThemeRepository', function() use($container) {
+    return new \App\Model\ThemeRepository(
+        $container->get('Database')
+    );
+});
 
+
+$container->add('ThemeController', function() use($container) {
+    return new \App\Controller\ThemeController(
+        $container->get('ThemeRepository')
+    );
+});
 
 
 
@@ -38,7 +50,9 @@ else {
     
 
     $controller = $container->get('PageController');
-    $controller->getPage('index', $container->get('PageRepository'));   
+    $controller->getPage('index', $container->get('PageRepository'));
+    
+    
 }
 
 
