@@ -25,6 +25,8 @@ $container->add('PageController', function() use($container) {
     );
 });
 
+// Planning if Themesystem is necessary
+
 $container->add('ThemeRepository', function() use($container) {
     return new \App\Model\ThemeRepository(
         $container->get('Database')
