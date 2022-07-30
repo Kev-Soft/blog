@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+//still under planning
+//maybe no themesystem is implemented
 
 class ThemeController {
 
