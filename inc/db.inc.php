@@ -5,9 +5,14 @@
 //edit variables
 //////////////////////////
 
-$host = "localhost";
-$db_name = "database-name";
-$db_user = "root";
-$db_password = "xxx";
+//$db->host = "localhost";
+//$db->name = "test";
+//$db->user = "root";
+//$db->password = "xxx";
 
+
+// creating PDO connection
+// code is deprecated
+$db = "";
+return $db;
 ?>
