@@ -13,6 +13,7 @@
 
 // creating PDO connection
 // code is deprecated
+
 $db = "";
 return $db;
 ?>
