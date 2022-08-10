@@ -2,7 +2,7 @@
 
 ///////////////////////////
 //rename file to: db.php
-//edit variables
+//
 //////////////////////////
 
 //$db->host = "localhost";
