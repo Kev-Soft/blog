@@ -2,7 +2,7 @@
 
 ///////////////////////////
 //rename file to: db.php
-//
+//need to chg concept
 //////////////////////////
 
 //$db->host = "localhost";
